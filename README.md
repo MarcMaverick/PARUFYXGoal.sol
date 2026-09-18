@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT.
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -36,6 +36,12 @@ contract PARUFYX is ERC20, ERC20Permit, ERC20Votes {
         return super.nonces(owner);
     }
 
+    // --- FIX ---
+    // ERC20Votes nutzt standardmaessig einen block-basierten Clock-Mode.
+    // Der Governor interpretiert votingDelay()/votingPeriod() ("1 days", "7 days")
+    // dann faelschlich als Blockanzahl statt als Sekunden.
+    // Durch Umstellung auf timestamp-basierten Clock-Mode werden diese Werte
+    // korrekt als tatsaechliche Zeit (Sekunden) interpretiert.
     function clock() public view override returns (uint48) {
         return uint48(block.timestamp);
     }
