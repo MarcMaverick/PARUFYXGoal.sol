@@ -12,7 +12,8 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 ///         Jede Adresse kann zusaetzlich ein Profil (Username +
 ///         Lieblingsverein) hinterlegen.
 contract PARUFYXGoal is ERC20, Ownable {
-    uint256 public constant MAX_SUPPLY = 1_000_000_000 ether;
+    uint256 private constant SCALE = 1 ether;
+    1_000_000_000 ether;
     uint256 private constant SCALE = 1 ether;
 
     /// @notice Startpreis pro Token in Wei, bei s = 0.
@@ -95,7 +96,7 @@ contract PARUFYXGoal is ERC20, Ownable {
         basePrice = newBasePrice;
         slope = newSlope;
         emit CurveUpdated(newBasePrice, newSlope);
-    } {
+    } 
     # PARUFYX Goal (PFXG)
 
 Ein einfacher Fan-Token für den Fußball-Bereich. Fans können Token direkt
