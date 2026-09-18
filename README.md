@@ -1,4 +1,4 @@
-git clone https://github.com/DEIN-USERNAME/parufyx-token.git
+https://github.com/MarcMaverick/Toffix-Laffite-Token-.git
 cd parufyx-token
 
 mkdir contracts
