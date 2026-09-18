@@ -1,4 +1,4 @@
-https://github.com/MarcMaverick/Toffix-Laffite-Token-.git
+gut clone https://github.com/MarcMaverick/Toffix-Laffite-Token-.git
 cd parufyx-token
 
 mkdir contracts
