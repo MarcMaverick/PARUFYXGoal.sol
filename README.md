@@ -79,3 +79,4 @@ function setCurve(uint256 newBasePrice, uint256 newSlope) external onlyOwner {
     slope = newSlope;
     emit CurveUpdated(newBasePrice, newSlope);
 }
+}
